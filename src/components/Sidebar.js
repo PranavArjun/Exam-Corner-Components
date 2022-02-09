@@ -5,10 +5,10 @@ import {Link} from "react-router-dom";
 function Sidebar() {
     const [isOpen, setisOpen] = useState(false);
   return <>
-    <nav className='h-screen position: fixed w-72 bg-gray-50 border-r border-gray-200 top-0 justify-center'>
+    <nav className='h-screen position: fixed w-72 bg-gray-50 border-r border-gray-200 top-0 justify-center overflow-auto'>
     <div className="py-4 px-6">
           <Link to="/" className="bg-transparent">
-            <img src={require("../img/logo.png")} alt="" />{" "}
+            <img className='logo' src={require("../img/navlogo.jpg")} alt="" />{" "}
           </Link>
         </div>
         <div className="pt-5 ">
@@ -33,30 +33,25 @@ function Sidebar() {
               )}
               Question Papers
             </button>
+            <div>
             {isOpen && (
               <div className=" flex-col " id="dropdown">
-                <Link
-                  to='/csfile'
-                  className="flex items-center h3 px-20 py-2 transition-all  duration-300 ease-in-out hover:bg-gray-200"
-                >
-                  CS
-                </Link>
-
-                <Link
-                  to="/itfile"
-                  className="flex items-center h3 px-20 py-2 transition-all  duration-300 ease-in-out hover:bg-gray-200"
-                >
-                  IT
-                </Link>
-                
-                <Link
-                  to="/entcfile"
-                  className="flex items-center h3 px-20 py-2 transition-all  duration-300 ease-in-out hover:bg-gray-200"
-                >
-                  ENTC
-                </Link>
+                {sub.map((item1,index1)=>{
+               return (
+                 <div key={index1}>
+                   <Link
+                  to={item1.path}
+                  className="flex  tracking-widest items-center h3 px-14  py-2 transition-all  duration-10000 ease-out hover:bg-gray-200"
+                  >
+                  <img className='sublogo className="h-7 w-7 mr-5 mx-3 "' src={require("../img/paperpng.png")} alt="" />
+                  {item1.title}
+                  </Link>
+                 </div>
+               )
+             })}
               </div>
-            )}
+                )}
+                </div>
           </div>
           <div className=" tracking-widest hover:bg-gray-200 pl-2">
             <Link to="/about" className="flex items-center h3 px-6 py-3">
@@ -76,3 +71,19 @@ function Sidebar() {
 }
 
 export default Sidebar;
+
+
+const sub =[
+  {
+    title : 'CS',
+    path : '/csfile'
+  },
+  {
+    title : 'IT',
+    path : '/itfile'
+  },
+  {
+    title : 'ENTC',
+    path : '/entcfile'
+  }
+]
