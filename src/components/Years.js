@@ -5,7 +5,7 @@ import Headbar from './Headbar';
 
 function Years() {
   return <>
-  <Headbar />
+  <Headbar heading={"Question Papers"} />
   <div className='main items-center  flex justify-center'>
     <div className="Years my-28 shadow-lg shadow-orange-800/25  w-5/6 ">
       {year.map((item, index) => {

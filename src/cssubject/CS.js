@@ -6,7 +6,7 @@ import {fe} from "../cssubject/fe";
 
 export default function CS() {
   return <div>
-      <Headbar/>
+      <Headbar heading={"Question Papers"}/>
                 <div className="main items-center  flex justify-center">
                     <div className="fes my-14 shadow-lg shadow-orange-800/25  w-5/6 ">
                         {fe.map((item, index) => {
