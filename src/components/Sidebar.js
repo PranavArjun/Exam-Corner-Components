@@ -8,7 +8,7 @@ function Sidebar() {
     <nav className='h-screen position: fixed w-72 bg-gray-50 border-r border-gray-200 top-0 justify-center overflow-auto'>
     <div className="py-4 px-6">
           <Link to="/" className="bg-transparent">
-            <img className='logo' src={require("../img/navlogo.jpg")} alt="" />{" "}
+            <img className='examcorner' src={require("../img/navlogo.jpg")} alt="" />{" "}
           </Link>
         </div>
         <div className="pt-5 ">

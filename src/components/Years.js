@@ -7,7 +7,7 @@ function Years() {
   return <>
   <Headbar heading={"Question Papers"} />
   <div className='main items-center  flex justify-center'>
-    <div className="Years my-28 shadow-lg shadow-orange-800/25  w-5/6 ">
+    <div className="Years my-28 shadow-lg shadow-orange-800/25  w-3/4 ">
       {year.map((item, index) => {
         return (
           <div className='flex '  key={index}>

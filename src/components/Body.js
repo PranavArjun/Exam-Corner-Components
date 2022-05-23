@@ -1,8 +1,13 @@
 import React from 'react';
+import Card from './Card';
+import Footer from './Footer';
 
 function Body() {
-  return <div className='pl-64'>
-      this is body
+  return <div>
+    <div className='main'>
+      <Card/>
+      </div>
+      <Footer/>
   </div>;
 }
 

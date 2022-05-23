@@ -2,3 +2,81 @@
 @tailwind components;
 @tailwind utilities;
 
+.box-icon {
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -webkit-align-content: center;
+    clear: both;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(154 52 18);
+    padding-left: 2px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 20px auto 20px;
+    border-width: 10px;
+    border-style: solid;
+    border-image: linear-gradient(
+        45deg,
+        rgb(71, 32, 6),
+        rgb(100, 62, 5),
+        rgb(53, 5, 5)
+      )
+      1;
+    color: white;
+  
+    transition: all 0.5s;
+    transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+  }
+  
+  .cardouter:hover > .card >.box-icon {
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    display: block;
+    border: 10px solid black;
+    border-radius: 50%;
+    color: brown !important;
+  }
+  
+  .info {
+    display: none;
+    transition: all 1s;
+  }
+  .cardouter{
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .cardouter:hover {
+    z-index: 10;
+  }
+  
+  .cardouter:hover .card {
+    background-color: rgb(154 52 18);
+    color: white;
+    transform: scale(1.08);
+  }
+  
+  .cardouter:hover .info{
+   display: block;
+   
+  }
+  
+  .logo {
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+  }
+  
+  .card-top-space{
+    height: 200px;
+  
+  }
+  
+  @layer components {
+    .logo-icon {
+      @apply relative   text-left  pb-12    text-lg;
+    }
+  }

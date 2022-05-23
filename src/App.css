@@ -4,18 +4,13 @@
 }
 
 .main{
-    margin-left: 287px;
+    margin-left: 285px;
     
 }
 
-.logo{
+.examcorner{
     max-width: 100%;
     height: 157px;
     margin-left: 27px;
 }
 
-/* Contact CSS */
-
-.bcolor{
-    background-color: #1E1F31;
-}
